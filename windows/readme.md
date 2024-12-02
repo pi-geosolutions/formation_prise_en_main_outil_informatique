@@ -35,7 +35,7 @@
 Pour travailler sur des fichiers bureautiques, on utilise en général une suite bureautique (OpenOffice, LibreOffice, MSOffice, etc). Pour le code, il en va de même, on utilise un éditeur de code.
 
 On peut utiliser soit:
-- un éditeur de code simple et polyvalent. C'est la solution la plus simple, mais parfois un peu limitée. Parmi les éditeurs gratuits sous Windows, on peut citer [notepad++](https://notepad-plus-plus.org/) et [Visual Studio Code](https://code.visualstudio.com/).
+- un éditeur de code simple et polyvalent. C'est la solution la plus simple, mais parfois un peu limitée. Parmi les éditeurs gratuits sous Windows, on peut citer [notepad++](https://notepad-plus-plus.org/) et [Visual Studio Code](https://code.visualstudio.com/) ou sa version open source [VSCodium](https://vscodium.com/).
 - une IDE (*integrated development environment*) qui fournit une interface plus riche, avec des assistants, raccourcis etc. Tout un environnement dédié en général à un langage, framework ou flux de développement. Une IDE permet en général de travailler plus efficacement mais nécessite un temps de prise en main. 
 
 Dans le cadre de ce cours, on va se focaliser sur la première catégorie, les éditeurs de code génériques. De toutes façons, ça sert toujours.
@@ -43,9 +43,9 @@ Dans le cadre de ce cours, on va se focaliser sur la première catégorie, les �
 #### Editeur de code, editeur de texte, quelle différence ?
 On voit parfois des gens essayer d'éditer du code dans Wordpad. C'est ridicule, tout développeur s'accordera à le dire. Ou, mais pourquoi ?
 
-**Wordpad** applique un formattage au texte. Il s'apparente plutôt à un Word allégé. Les tabulations en particulier ne seront pas traitées correctement. Les guillements, aussi, seront sans doute remplacés. Bref, ça va pourrir le code. Il est peu probable qu'il marche après édition, s'il marchait avant.
+**Wordpad = mauvaise idée !**. Applique un formattage au texte. Il s'apparente plutôt à un Word allégé. Les tabulations en particulier ne seront pas traitées correctement. Les guillements, aussi, seront sans doute remplacés. Bref, ça va pourrir le code. Il est peu probable qu'il marche après édition, s'il marchait avant.
 
-**OK. Le Bloc-note alors ?**
+**OK. Le Bloc-note alors ? Bof bof**
 C'est plus acceptable. Mais particulièrement inefficace.C'est un outil grand public, pas du tout pensé pour le code. 
 
 Un éditeur de code fournira plein d'outils qui vont vous faciliter la vie. Revenir en arrière est impossible. 
