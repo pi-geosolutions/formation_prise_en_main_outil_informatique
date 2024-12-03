@@ -26,6 +26,7 @@ Les puristes vous diront que non, ce n'est pas une base de données. Dans un sen
 ... sauf que c'est malgré tout l'outil que la plupart des gens utilisent pour inventorier, organiser et stocker leurs données. Et les éditer.
 
 Alors ça vaut le coup d'en parler
+
 - pour mieux intégrer ces pratiques dans un usage de base de données. Notamment structurer proprement les données dans les feuilles de votre tableur
 - avoir connaissance de méthodes permettant de laisser les gens travailler sur leur tableur, pour un usage final en base de données
 - essayer de mettre en place un flux performant qui sortira le moins possible vos collègues de leurs habitudes de travail. Tout en les aidant à mieux se servir de leurs outils.
@@ -33,6 +34,7 @@ Alors ça vaut le coup d'en parler
 ### Ne pas faire...
 
 **A _ne pas_ faire : **
+
 - **fusion de cellules** : **_à éviter absolument_**, pour un usage de type BD. On en a tous fait, et c'est OK d'en faire quand il s'agit d'un petit tableau, destiné à aller dans un rapport, des slides ou autre. Mais pour stocker de la *donnée*, c'est une très mauvaise idée : 
 	- On ne peut plus faire de tri
 	- On ne peut plus faire de filtre
@@ -91,6 +93,7 @@ Tout logiciel et tableur sera capable de lire du CSV (et permet de configurer le
 Son principal inconvénient : il ne stocke pas les types des colonnes (Texte, Entier, Date etc).Il existe bien quelques essais pour corriger ce souci ([fichier CSVT (QGIS, GDAL/OGR)](https://docs.qgis.org/2.18/fr/docs/user_manual/managing_data_source/supported_data.html#csvt-files), [Tabular data package](https://specs.frictionlessdata.io/tabular-data-package/#introduction), [type prefixes](https://www.webdatarocks.com/doc/data-type-prefixes/)). Mais l'adoption est encore assez limitée.
 
 Dans un usage geospatial avec QGIS et GDAL/OGR, on pourra s'intéresser 
+
 - aux fichiers .csvt, voire au [GeoCSV](https://giswiki.hsr.ch/GeoCSV)
 - ou bien au format VRT, qui a l'avantage de couvrir bien plus que le simple format CSV
 
@@ -98,6 +101,7 @@ Dans un usage geospatial avec QGIS et GDAL/OGR, on pourra s'intéresser
 *https://gdal.org/*
 
 GDAL/OGR est un projet open source, qui fournit :
+
 - une librairie logicielle (brique à assembler dans un programme) d'entrée/sortie pour de nombreux formats. En clair, elle permet de lire et d'écrire de très nombreux formats. La plupart sont goepspatiaux. Certains sont plus génériques, comme par exemple CSV, XSL(X), ODS.
 La liste est fournie sur leur site : [formats vecteur](https://gdal.org/drivers/vector/index.html), [formats raster](https://gdal.org/drivers/raster/index.html)
 - un ensemble de programmes et de scripts permettant de manipuler les données supportées.
@@ -142,6 +146,7 @@ Je n'en dirai pas plus. Les patients attendront le cours sur le format VRT. Les 
 
 La librairie OGR permet de manipuler des données vectorielles, et notamment des données VRT. 
 Elle fournit aussi des utilitaires en ligne de commande, notamment : 
+
 - [ogrinfo](https://gdal.org/programs/ogrinfo.html#ogrinfo) : afficher les propriétés d'une donnée vectorielle.
 - [ogr2ogr](https://gdal.org/programs/ogr2ogr.html#ogr2ogr) : conversion d'un format à un autre. Mais en fait, bien plus que ça. Avec ses nombreuses options, et si on tient compte que parmi les formats de sortie possibles, il y a les bases de données, c'est un excellent outil de publication en base de données.
 
@@ -155,6 +160,7 @@ Quel rapport avec notre sujet ?
 Hé bien VRT est capable de lire et transformer des données CSV. Et même du XSLX ou ODS. ogr2ogr sait publier en base de données. On a donc tout le nécessaire ou presque pour alimenter une base de données solide (type PostgreSQL, MySQL ou Oracle) en ligne, à partir de fichiers tableur gérés par des personnes non-techniques, non formées aux bases de données.
 
 En d'autres termes : on peut 
+
 - laisser les collègues travailler sur leurs outils habituels, 
   - sans leur demander d'apprendre les bases de données, la ligne de commande, les SIG etc. 
   - avec peut-être juste quelques préconisations sur la façon d'organiser leurs données dans leurs tableurs
@@ -167,6 +173,7 @@ En d'autres termes : on peut
 Je ne vais pas m'étaler sur la théorie, les modèles conceptuels de données etc. Vous aurez des cours sur les bases de données durant le cursus.
 
 On va regarder la base de données dans la continuité de ce cours : un système de gestion de bases de données (SGBD), PostgreSQL par exemple, fait à peu près la même chose qu'un tableur, avec notamment les différences suivantes : 
+
 - beaucoup plus performant. Il est capable de gérer plusieurs millions d'enregistrements sans broncher
 - usage distribué : habituellement, on les héberge sur un serveur, en ligne, pour des accès multiples
 - sécurisé : du fait du point précédent, la sécurité importe beaucoup
@@ -194,6 +201,7 @@ docker compose -p idgeo-db -f resources/docker-compose.yml up -d
 ```bash
 psql -h my_host -p 5432 -U my_user -d my_base
 ```
+
 Si la connexion se passe bien, on aura une invite de commande. On peut demander l'aide via `\?`. Et il est facile de trouver une liste des commandes les plus utiles. Par exemple sur https://www.postgresqltutorial.com/postgresql-administration/psql-commands/.
 
 ### Pousser de la donnée en base
@@ -241,7 +249,7 @@ psql # normalement pas besoin de plus car on a défini les variables d'environne
 ```sql
 
 ```
-TODO:
+TODO: Exemples de requêtes
 
 ### Insertion de données
 
