@@ -1,6 +1,7 @@
 Pour les exercices de BD : 
 
 On utilise : 
+
 - [x] https://opendata.lillemetropole.fr/explore/dataset/menu-cantine/table/ pour illustrer une donnée relationnelle mise à plat, mais pas top. Ca serait sympa de la migrer en base structurée proprement et jouer des requêtes dessus, du genre
 - [x] https://opendata.lillemetropole.fr/explore/dataset/donnees-essentielles-mel/table/ comme table simple non-relationnelle. On publie en base et on fait du tableau croisé dynamique (PARTITION BY)
 - [x] https://www.data.gouv.fr/fr/datasets/donnees-de-comptabilite-generale-de-letat/, fichier 2012-2022-balances-des-comptes-de-letat.csv , on remet l'année en clef et on publie en base (sample). Et on voit comment faire pivot table

@@ -2,6 +2,7 @@
 ### 2. Raccourcis clavier
 
 Quels sont les raccourcis pour ?
+
 - Edition
     - Copier : Ctrl + C
     - Coller : Ctrl + V
