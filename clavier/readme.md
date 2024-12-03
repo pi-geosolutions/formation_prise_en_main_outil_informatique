@@ -28,6 +28,7 @@ Ca donne de bonnes bases. Si vous avez un temps mort durant les cours, vous pour
 ### 2. Raccourcis clavier
 
 Quels sont les raccourcis pour ?
+
 - Edition
     - Copier
     - Coller

@@ -34,6 +34,7 @@ Une fois WSL activé, par défaut je crois qu'il installe une ubuntu. Si on veut
 ### Spécificités de WSL
 
 Je vais sûrement en rater, mais en vrac : 
+
 - pas d'interface graphique linux, uniquement ligne de commande
 - depuis linux, le système de fichiers Windows s'accède via un chemin typiquement linuxien, dans /mnt. Ex. : C:/ se voit depuis le système linux à /mnt/c/
 - depuis Windows, le système de fichier linux se trouve dans `\\wsl$\`. Par exemple, mon compte utilisateur dans ma debian se trouvera à `\\wsl$\Debian/home\jean`
@@ -71,6 +72,7 @@ Bash est le shell le plus répandu dans l'environnement linux. Enfin, c'est faux
 Vous allez retrouver à peu près toutes les commandes listées pour le powershell, puisqu'elles viennent de bash. Avec plus d'options et de puissance, vous aurez : pwd, cd, ls, mkdir, cp, rm.
 
 Pour afficher le contenu d'un fichier, ça sera 
+
 - `head log.txt` pour les 10 premières lignes
 - `tail log.txt` pour les 10 dernières
 
@@ -126,6 +128,7 @@ De base, on tape ces commandes et on les enchaîne depuis le terminal.
 Mais ensuite, si on veut reproduire ces actions, il est préférable de les organiser dans un fichier de script. Un fichier de script peut vite devenir sa propre documentation
 
 Un fichier bash doit : 
+
 - commencer par la ligne `#!/bin/bash`
 - être exécutable
 
@@ -149,14 +152,18 @@ La liste des codes insee des communes : 31032, 31056, 31069, 31088, 31149, 31150
 
 #### Première approche
 En première approche, on va se simplifier la vie : le service fournit des jeux de données par commune.
+
 Vous allez créer un script qui
+
 - crée un dossier principal et dans ce dossier, un sous-dossier par commune
 - télécharge les fichiers pour chaque commune, les stocke dans le sous-dossier correspondant et le décompresse
 - Utilise ogr2ogr pour transformer le fichier CSV en fichier geopackage
 
 #### Deuxième approche
 Supposons que le service ne fournisse pas des extractions par commune et qu'on doive faire avec un plus gros fichier.
+
 Vous allez créer un script qui
+
 - crée un dossier principal et dans ce dossier, un sous-dossier par commune
 - télécharge le fichier CSV du département Haute Garonne (31) et de dézippe
 - copie le template VRT fourni ici dans chacun des dossiers de commune
@@ -164,6 +171,7 @@ Vous allez créer un script qui
 - Utilise ogr2ogr pour transformer la source VRT en fichier geopackage
 
 *Note 1* : VRT est un format inveté par GDAL/OGR, qui permet de définir une donnée virtuelle à partir d'une donnée source et d'un fichier .vrt qui définit une transformation à appliquer à cette donnée source. Vous aurez un cours dédié à ça durant votre cursus. On ne va donc pas rentrer trop dans les détails. Mais pour les impatients : https://gdal.org/drivers/vector/vrt.html.
+
 *Note 2* : bien sûr, on pourrait faire plus simple. Mais on essaie d'appliquer ce qu'on a vu en cours.
 
 
@@ -172,6 +180,7 @@ Vous allez créer un script qui
 Dans l'ensemble, on peut définir un serveur comme un ordinateur connecté au réseau, fournissant des services distants et auquel on accède sans interface graphique.
 
 Attention, Linux peut fournir une interface graphique. Je dirais même qu'il est meilleur que Windows pour ça. en tous cas il offre plus de choix. Mais là où il se démarque vraiment, c'est quand on n'a *pas* d'interface graphique.
+
 Il nous reste alors la ligne de commande. Nous y sommes.
 
 ### Connexion distante

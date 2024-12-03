@@ -1,3 +1,5 @@
+# Programme
+
 ### Ordi
 - [ ] utilisation du clavier
 
@@ -50,7 +52,8 @@
 	- [ ] Insertion
 
 ### Bonus
-Si on a du temps à perdre
+Si on a du temps à perdre : 
+
 - [ ] Docker
 - [ ] Notions de base de réseau
 	- [ ] serveurs

@@ -35,6 +35,7 @@
 Pour travailler sur des fichiers bureautiques, on utilise en général une suite bureautique (OpenOffice, LibreOffice, MSOffice, etc). Pour le code, il en va de même, on utilise un éditeur de code.
 
 On peut utiliser soit:
+
 - un éditeur de code simple et polyvalent. C'est la solution la plus simple, mais parfois un peu limitée. Parmi les éditeurs gratuits sous Windows, on peut citer [notepad++](https://notepad-plus-plus.org/) et [Visual Studio Code](https://code.visualstudio.com/) ou sa version open source [VSCodium](https://vscodium.com/).
 - une IDE (*integrated development environment*) qui fournit une interface plus riche, avec des assistants, raccourcis etc. Tout un environnement dédié en général à un langage, framework ou flux de développement. Une IDE permet en général de travailler plus efficacement mais nécessite un temps de prise en main. 
 
@@ -58,6 +59,7 @@ Dans ce cours, on va couvrir
 [notepad++](https://notepad-plus-plus.org/) et [Visual Studio Code](https://code.visualstudio.com/).
 
 Chacun de ces logiciels propose des fonctions de base, déjà bien riches, que vous pouvez compléter à l'aide de plugins : 
+
 - [liste des plugins pour notepad++](https://github.com/notepad-plus-plus/nppPluginList/blob/master/doc/plugin_list_x64.md)
 - [liste des plugins pour VS code](https://marketplace.visualstudio.com/vscode)
 
@@ -88,6 +90,7 @@ Chacun de ces logiciels propose des fonctions de base, déjà bien riches, que v
 - Où sont installés les logiciels ?
 
 Pour éclairer notre gouverne, on va prendre un peu d'avance sur le cours et ouvrir un terminal powershell. 
+
 - Tapez la commande `ls C:/`. Des commentaires sur ce que vous voyez ?
 - Tapez la commande `ls C:/Users`. Des commentaires sur ce que vous voyez ?
 
@@ -135,6 +138,7 @@ Pour np++, il faut l'activer sur Paramètres -> Préférences -> Zones d'éditio
 
 ### Choisir son navigateur
 Vous avez l'embarras du choix : 
+
 - Microsoft Edge
 - Mozilla Firefox
 - les navigateurs basés sur le moteur chromium
@@ -142,6 +146,7 @@ Vous avez l'embarras du choix :
     - Brave
     - ...
 - Opera
+
 et sans doute d'autres encore.
 
 On évitera Edge. S'il marque un net progrès par rapport aux précédents navigateurs Microsoft, il pose encore des problèmes en termes de support des standards.
@@ -152,6 +157,7 @@ Nous allons considérer l'alternative Firefox / Chrome, qui doivent être déjà
 
 ### Recherche vs URL
 Depuis quelques années, on peut saisir sa recherche google directement dans la barre d'URL. Cette simplification en termes d'UI (interface utilisateur) est discutable en termes d'UX (expérience utilisateur) : 
+
 - ce que vous tapez dans la barre d'url est automatiquement envoyé au moteur de recherche (et donc enrichit les stats d'usage)
 - si vous faites une erreur en tapant une URL et que celle ci n'est pas valide, cela va automatiquement se transformer en recherche, et vous pourrir votre saisie
 - et ceci est particulièrement agaçant quand on développe des applis web en local
@@ -179,6 +185,7 @@ En termes de protection des données et de la vie privée, c'est déjà ça.
 ### Configuration
 
 Dans les options de configuration, ce n'est pas fondamental, mais un certain nombre d'options super pratiques ne sont pas actives par défaut : 
+
 - **Sessions** : à l'ouverture du navigateur, restaurer les onglets ouverts de la session précédente
 - **Téléchargements** : le lieu où les téléchargements sont sauvegardés : j'aime contrôler cet aspect, et donc choisir à chaque fois au lieu de subir un emplacement automatique
 
@@ -188,6 +195,7 @@ Dans les options de configuration, ce n'est pas fondamental, mais un certain nom
 C'est un outil "avancé", mais tellement pratique. On peut l'ouvrir via le menu contextuel (clic droit), ou bien la touche `F12`. On prend un peu d'avance sur d'autres cours. Mais ça ne peut pas faire de mal.
 
 Il offre divers outils, globalement les mêmes qu'on soit sous Firefox ou Chrome, possiblement nommés différemment. Je vais ici citer Firefox.
+
 - **Inspecteur** : affiche le code HTML/CSS d'une page web. On peut y trouver des infos intéressantes, pratiques, expérimenter des changements dans le layout de la page, très pratique quand on code une page web ou du style. Parfois aussi quand on veut récupérer une information grossièrement cachée
 - **Console** : console javascript. Peut permettre d'exécuter du javascript, d'inspecter des variables javascript. Affiche aussi les logs javascript. Pratique notamment en cas d'erreur sur une page, pour comprendre ce qui se passe.
 - **Débogueur** : usage plus avancé avec le code javascript
@@ -232,6 +240,7 @@ Le système de fichiers n'est pas vraiment vu de la même façon que via la GUI 
 Un bon nombre des commandes listées ici sont reprises du shelle bash (linux), on les retrouvera donc sans surprise, mais plus puissantes, quand on verra linux.
 
 qq commandes : 
+
 - `pwd` : savoir où on est (chemin absolu)
 - `cd` : se déplacer (`cd` = *change directory*). 
     - Soit de façon relative : 
