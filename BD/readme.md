@@ -102,7 +102,7 @@ Dans un usage geospatial avec QGIS et GDAL/OGR, on pourra s'intéresser
 
 GDAL/OGR est un projet open source, qui fournit :
 
-- une librairie logicielle (brique à assembler dans un programme) d'entrée/sortie pour de nombreux formats. En clair, elle permet de lire et d'écrire de très nombreux formats. La plupart sont goepspatiaux. Certains sont plus génériques, comme par exemple CSV, XSL(X), ODS.
+- une librairie logicielle (brique à assembler dans un programme) d'entrée/sortie pour de nombreux formats. En clair, elle permet de lire et d'écrire de très nombreux formats. La plupart sont geospatiaux. Certains sont plus génériques, comme par exemple CSV, XLS(X), ODS.
 La liste est fournie sur leur site : [formats vecteur](https://gdal.org/drivers/vector/index.html), [formats raster](https://gdal.org/drivers/raster/index.html)
 - un ensemble de programmes et de scripts permettant de manipuler les données supportées.
 
@@ -157,7 +157,7 @@ Combinés ensemble, VRT et ogr2ogr constituent en fait quasiment un [ETL](https:
 ### Le tableau comme outil de saisie de base de données
 Quel rapport avec notre sujet ?
 
-Hé bien VRT est capable de lire et transformer des données CSV. Et même du XSLX ou ODS. ogr2ogr sait publier en base de données. On a donc tout le nécessaire ou presque pour alimenter une base de données solide (type PostgreSQL, MySQL ou Oracle) en ligne, à partir de fichiers tableur gérés par des personnes non-techniques, non formées aux bases de données.
+Hé bien VRT est capable de lire et transformer des données CSV. Et même du XLSX ou ODS. ogr2ogr sait publier en base de données. On a donc tout le nécessaire ou presque pour alimenter une base de données solide (type PostgreSQL, MySQL ou Oracle) en ligne, à partir de fichiers tableur gérés par des personnes non-techniques, non formées aux bases de données.
 
 En d'autres termes : on peut 
 
@@ -217,16 +217,18 @@ export PGUSER=cpgeom
 export PGHOST=localhost
 
 prefix=jpommier
+schema=jpommier
+psql -c "CREATE SCHEMA $schema"
 source=ouvrages-acquis-par-les-mediatheques
 # On remplace le préfixe par défaut dans les VRT. Il permet qu'on ait chacun nos tables 
 # dans la base sanss'écraser les uns les autres
-sed -i "s/jpommier/$prefix/g" ${source}.vrt
-ogr2ogr -progress -f PostgreSQL PG:"host='$PGHOST' user='$PGUSER' dbname='$PGDATABASE'" ${source}.vrt -lco OVERWRITE=YES
+sed -i "s/jpommier_//g" ${source}.vrt
+ogr2ogr -progress -f PostgreSQL PG:"host='$PGHOST' user='$PGUSER' dbname='$PGDATABASE'" ${source}.vrt -lco SCHEMA=$schema -lco OVERWRITE=YES
 # Et si ça s'est bien passé, on envoie le reste avec une boucle, c'est plus efficace : 
 for source in 2012-2022-balances-des-comptes-de-letat donnees-essentielles-mel-marches-publics logements-vacants-du-parc-prive-par-commune-au-01012021-lovac admin_express_communes_31  menu-cantine
 do
-  sed -i "s/jpommier/$prefix/g" ${source}.vrt
-  ogr2ogr -progress -f PostgreSQL PG:"host='$PGHOST' user='$PGUSER' dbname='$PGDATABASE'" ${source}.vrt -lco OVERWRITE=YES 
+  sed -i "s/jpommier_//g" ${source}.vrt
+  ogr2ogr -progress -f PostgreSQL PG:"host='$PGHOST' user='$PGUSER' dbname='$PGDATABASE'" ${source}.vrt -lco SCHEMA=$schema -lco OVERWRITE=YES 
 done
 ```
 Pour alléger la ligne de commande, on a utilisé des variables d'environnement pour déclarer les paramètres de connexion. Je ne les ai pas nommées au hasard. Pour que psql et ogr les reconnaissent, il faut suivre une convention. Cf. https://docs.postgresql.fr/15/libpq-envars.html.
