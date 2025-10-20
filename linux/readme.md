@@ -18,7 +18,7 @@
 ## WSL2
 Il ne s'agit pas à proprement parler de Linux. Mais d'une façon de faire tourner un système linux dans Windows. Enfin, à ce que j'ai compris, plutôt une émulation, une sorte de machine virtuelle. On n'a pas tout, loin de là. Mais c'est assez bien intégré dans Windows. Et c'est très pratique.
 
-Windows depuis la version 10 permet d'installer un noyeau linux, dans son système Windows, ce qui permet de disposer d'un système linux en ligne de commande (pas d'interface graphique, par défaut) qui peut interagir avec le système Windows. Ca s'appelle WSL (Windows Subsystem Linux).
+Windows depuis la version 10 permet d'installer un noyeau linux, dans son système Windows, ce qui permet de disposer d'un système linux en ligne de commande (pas d'interface graphique, par défaut) qui peut interagir avec le système Windows. Ca s'appelle WSL (*Windows Subsystem Linux*).
 
 ### Installer WSL2
 Sur les ordis IDGeo, ça devrait déjà être fait. 
@@ -41,8 +41,9 @@ Je vais sûrement en rater, mais en vrac :
 
 
 ## Arborescence système Linux
-Ca dépend un peu de la distribution utilisée. On va parler ici de Debian/Ubuntu. 
-TODO: Ecrire un résumé
+Ca dépend un peu de la distribution utilisée. On va parler ici de Debian/Ubuntu.  
+
+cf https://debian-handbook.info/browse/fr-FR/stable/sect.filesystem-hierarchy.html
 
 ## Installer des logiciels
 Ca dépend un peu de la distribution utilisée. On va parler ici de Debian/Ubuntu. 
@@ -69,7 +70,7 @@ ogr2ogr --help
 ## Bash
 Bash est le shell le plus répandu dans l'environnement linux. Enfin, c'est faux, c'est sh mais il est moins riche.
 
-Vous allez retrouver à peu près toutes les commandes listées pour le powershell, puisqu'elles viennent de bash. Avec plus d'options et de puissance, vous aurez : pwd, cd, ls, mkdir, cp, rm.
+Vous allez retrouver à peu près toutes les commandes listées pour le powershell, puisqu'elles viennent de bash. Avec plus d'options et de puissance, vous aurez : `pwd`, `cd`, `ls`, `mkdir`, `cp`, `rm`.
 
 Pour afficher le contenu d'un fichier, ça sera 
 
@@ -117,7 +118,7 @@ Et enfin, pour reprendre l'exemple précédemment donné :
 ```bash
 for f in $(ls -Sr midi-pyrenees-osm/*.shp)
 do
-    ogr2ogr $(basename -- ${f%.*})_09.shp -clipsrc ../departement-ariege.shp -lco ENCODING=UTF-8 $f ;     
+    ogr2ogr ${s%.*}_09.shp -clipsrc ../departement-ariege.shp -lco ENCODING=UTF-8 $f ;     
 done
 ```
 
@@ -125,18 +126,18 @@ done
 
 De base, on tape ces commandes et on les enchaîne depuis le terminal. 
 
-Mais ensuite, si on veut reproduire ces actions, il est préférable de les organiser dans un fichier de script. Un fichier de script peut vite devenir sa propre documentation
+Mais ensuite, si on veut reproduire ces actions, il est préférable de les organiser dans un fichier de script. Convenablement commenté, un fichier de script peut vite devenir sa propre documentation
 
 Un fichier bash doit : 
 
 - commencer par la ligne `#!/bin/bash`
-- être exécutable
+- être exécutable.
 
-On peut écrire des commentaires en les débutant par `#`
+On peut écrire des commentaires en les débutant par `#`.
 
-On peut définir des variables (Ex. `ma_var=quelquechose`) et l'appeler avec $ (ex. `echo $ma_var`)
+On peut définir des variables (Ex. `ma_var=quelquechose`) et l'appeler avec `$` (ex. `echo $ma_var`).
 
-On peut écrire des fonctions pour les opérations répétitives, ou pour structurer le code
+On peut écrire des fonctions pour les opérations répétitives, ou pour structurer le code.
 
 ### Tâches répétitives
 Si vous avez les commandes à exécuter à intervalles régulier, vous pouvez utiliser `cron`. 
@@ -184,7 +185,7 @@ Attention, Linux peut fournir une interface graphique. Je dirais même qu'il est
 Il nous reste alors la ligne de commande. Nous y sommes.
 
 ### Connexion distante
-Un outil omniprésent lorsqu'on parle de connexion distante : `ssh` (Secure Shell). Il permet de se connecter en ligne de commande à une machine distante, de façon totalement sécurisée. On y est alors comme chez soi... en ligne de commande
+Un outil omniprésent lorsqu'on parle de connexion distante : `ssh` (Secure Shell). Il permet de se connecter en ligne de commande à une machine distante, de façon totalement sécurisée. On y est alors comme chez soi... en ligne de commande.
 
 ### Tunnel SSH
 On peut même faire un pas de plus, et jouer à saute-mouton : ssh permet beaucoup de choses, notamment d'ouvrir des *tunnels*. Un tunnel permet de passer par un serveur distant pour se connecter à une autre machine à laquelle seul ce serveur distant pouvait se connecter. Sauf qu'avec le tunnel, une fois établi, c'est comme si cette autre machine était en local !
