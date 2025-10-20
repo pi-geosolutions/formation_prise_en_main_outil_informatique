@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OGRVRTDataSource>
+  <OGRVRTLayer name="demande_de_valeur_fonciere">
+    <SrcDataSource relativeToVRT="1">31.csv</SrcDataSource>
+    <SrcSql dialect="sqlite">SELECT * FROM '31' WHERE code_commune='REMPLACER_PAR_CODE_INSEE_COMMUNE'</SrcSql>
+    
+    <!-- <SrcLayer>31</SrcLayer> -->
+  </OGRVRTLayer>
+</OGRVRTDataSource>

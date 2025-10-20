@@ -25,7 +25,7 @@ Cependant, on peut aussi voir les choses comme suit :
 
 Ordre proposé:
 
-1. [clavier](clavier/readme.md)
-1. [windows](windows/readme.md)
-1. [linux](linux/readme.md)
-1. [introduction au concept de base de données](BD/readme.md)
+1. [clavier](clavier.md)
+1. [windows](windows.md)
+1. [linux](linux.md)
+1. [introduction au concept de base de données](bd.md)
