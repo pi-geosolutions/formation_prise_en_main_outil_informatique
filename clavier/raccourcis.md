@@ -4,32 +4,35 @@
 Quels sont les raccourcis pour ?
 
 - Edition
-    - Copier : Ctrl + C
-    - Coller : Ctrl + V
-    - Historique des copier : Win + V
-    - Couper : Ctrl + X
-    - Tout sélectionner : Ctrl + A
-    - Annuler la dernière action : Ctrl + Z
-    - Restaurer la dernière action Ctrl + Y
-    - Enregistrer un fichier : Ctrl + S
-    - Enregistrer un fichier et définir le nom : Ctrl + Shift + S
-    - Texte en gras : Ctrl + b
-    - Texte en italique : Ctrl + i
-    - Chercher dans le texte : Ctrl + F
-    - Remplacer dans le texte : Ctrl + H ou R
+    - Copier Ctrl + c
+    - Coller Ctrl + v
+    - Couper Ctrl + x
+    - Tout sélectionner Ctrl + a
+    - Annuler la dernière action Ctrl + z
+    - Restaurer la dernière action Ctrl + y
+    - Enregistrer un fichier Ctrl + s
+    - Enregistrer un fichier et définir le nom Ctrl + Shift + s
+    - Texte en gras Ctrl + b ou g
+    - Texte en italique Ctrl + i
+    - Chercher dans le texte Ctrl + f
+    - Remplacer dans le texte Ctrl + h
 - Actions sur les fichiers / fenêtres
-    - Ouvrir un fichier : Ctrl + O
-    - Créer un nouveau fichier : Ctrl + N
-    - Afficher les propriétés d'un fichier : 
-    - Quitter l'application : Ctrl + Q
-    - Ouvrir le menu Windows : Win
-    - Passer à l'élément suivant : Tab
-    - Afficher/masquer le bureau Windows : Win + D
+    - Ouvrir un fichier Entrée
+    - Créer un nouveau dossier Ctrl + Shift + n
+    - Afficher les propriétés d'un fichier Alt + Entrée
+    - Quitter l'application (Alt + F4 /) Ctrl + Q / Ctrl + W
+    - Ouvrir le menu Windows Touche Windows
+    - Passer à l'élément suivant Alt + Tab / Windows + Tab
+    - Afficher/masquer le bureau Windows Windows + D
 - Dans le navigateur
-    - Ouvrir dans un nouvel onglet : bouton-milieu, Ctrl + bouton gauche, Ctrl + entrée
-    - Fermer un onglet : Ctrl + W
-    - Restaurer un onglet fermé : Ctrl + Shift + T
-    - Restaurer une fenêtre fermée : Ctrl + Shift + N
-    - Recharger la page : Ctrl + R
-    - Revenir à la page précédente (historique-arrière) : Alt + flèche gauche
-    - Faire défiler les onglets : Ctrl + Tab
+    - Ouvrir dans un nouvel onglet Ctrl + clic
+    - Fermer un onglet Ctrl + w
+    - Restaurer un onglet fermé Ctrl + Shift + t
+    - Restaurer une fenêtre fermée Ctrl + Shift + n
+    - Recharger la page Ctrl + r
+    - Revenir à la page précédente (historique-arrière) Alt + <-
+    - Passer d'un onglet à l'autre : Ctrl + Tab / Ctrl + Shift + Tab
+- Divers : 
+    - Ouvrir l'outil de recherche : Ctrl + e
+    - Verrouiller la session Windows + L
+    
