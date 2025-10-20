@@ -42,12 +42,13 @@ On peut utiliser soit:
 Dans le cadre de ce cours, on va se focaliser sur la première catégorie, les éditeurs de code génériques. De toutes façons, ça sert toujours.
 
 #### Editeur de code, editeur de texte, quelle différence ?
-On voit parfois des gens essayer d'éditer du code dans Wordpad. C'est ridicule, tout développeur s'accordera à le dire. Ou, mais pourquoi ?
+On voit parfois des gens essayer d'éditer du code dans Wordpad. C'est ridicule, tout développeur s'accordera à le dire. Oui, mais pourquoi ?
 
-**Wordpad = mauvaise idée !**. Applique un formattage au texte. Il s'apparente plutôt à un Word allégé. Les tabulations en particulier ne seront pas traitées correctement. Les guillements, aussi, seront sans doute remplacés. Bref, ça va pourrir le code. Il est peu probable qu'il marche après édition, s'il marchait avant.
+**Wordpad = mauvaise idée !**  
+Applique un formattage au texte. Il s'apparente plutôt à un Word allégé. Les tabulations en particulier ne seront pas traitées correctement. Les guillements, aussi, seront sans doute remplacés. Bref, ça va pourrir le code. Il est peu probable qu'il marche après édition, s'il marchait avant.
 
-**OK. Le Bloc-note alors ? Bof bof**
-C'est plus acceptable. Mais particulièrement inefficace.C'est un outil grand public, pas du tout pensé pour le code. 
+**OK. Le Bloc-note alors ? Bof bof**  
+C'est plus acceptable. Mais particulièrement inefficace. C'est un outil grand public, pas du tout pensé pour le code. 
 
 Un éditeur de code fournira plein d'outils qui vont vous faciliter la vie. Revenir en arrière est impossible. 
 Alors, pillule bleue ou pillule rouge ?
@@ -55,13 +56,14 @@ Alors, pillule bleue ou pillule rouge ?
 #### Choisir un éditeur de code
 Il y a un apprentissage et chaque éditeur fait à sa façon. Vous avez le choix de l'éditeur. Mais essayez de vous fixer sur un et investir assez de temps pour le maitriser.
 
-Dans ce cours, on va couvrir
-[notepad++](https://notepad-plus-plus.org/) et [Visual Studio Code](https://code.visualstudio.com/).
+Dans ce cours, on va couvrir (vite fait)
+[notepad++](https://notepad-plus-plus.org/) et [Visual Studio Code](https://code.visualstudio.com/) / [VSCodium](https://vscodium.com/).
 
 Chacun de ces logiciels propose des fonctions de base, déjà bien riches, que vous pouvez compléter à l'aide de plugins : 
 
 - [liste des plugins pour notepad++](https://github.com/notepad-plus-plus/nppPluginList/blob/master/doc/plugin_list_x64.md)
 - [liste des plugins pour VS code](https://marketplace.visualstudio.com/vscode)
+ - [Doc pour VSCodium](https://github.com/VSCodium/vscodium/blob/master/docs/index.md)
 
 
 #### Quelques fonctionnalités utiles
@@ -77,13 +79,14 @@ Chacun de ces logiciels propose des fonctions de base, déjà bien riches, que v
 
 ### 1. Arborescence système
 
-- Créer un dossier pour les données liées à ce cours, à l'emplacement prévu par les bonnes pratiques idgeo
+- Créer un dossier pour les données liées à ce cours, à l'emplacement prévu par les bonnes pratiques idgeo (*a priori* dans le disque D si vous en avez un)
 
 - Y créer un fichier pour vos prises de notes. Je vous propose un fichier avec extension .md (Markdown). On verra pourquoi dans la partie dédiée à l'éditeur de code.
 
 
 ### 2. Arborescence système
 
+Savoir où on stocke nos fichiers est important. Par exemple, savez-vous :
 - Où est stocké réellement le contenu du dossier Documents ?
 - Où vont les fichiers stockés sur le Bureau ?
 - Quel est le dossier système de Windows ?
@@ -102,10 +105,11 @@ Quand on code, on travaille sur plusieurs fichiers. Les ouvrir un par un est par
 
 **Notepad++**: Affichage -> Projet -> Panneau de projet 1. Et puis on y ouvre les dossiers qui nous intéressent
 
-**VS code**: Barre à gauche, première icône. Et puis on y ouvre les dossiers qui nous intéressent
+**VS code / VSCodium**: Barre à gauche, première icône. Et puis on y ouvre les dossiers qui nous intéressent
 
 ##### Coloration syntaxique
-Par ce terme, on entend la mise en évidence des mots clef d'un langage de programmation. Ca facilite grandement la lecture du code. Essayez donc d'ouvrir ce fichier dans votre éditeur et d'obtenir la coloration syntaxique propre au langage Markdown.
+Par ce terme, on entend la mise en évidence des mots clef d'un langage de programmation. Ca facilite grandement la lecture du code. Essayez donc d'ouvrir ce fichier dans votre éditeur et d'obtenir la coloration syntaxique propre au langage Markdown.  
+Vous pouvez aussi ouvrir les fichiers stockés dans le chemin `windows/files` de ce repo.
 
 ##### Prévisualisation markdown
 Tant qu'on y est, votre éditeur propose un outil de prévisualisation du code Markdown (affichage propre imprimable).
@@ -123,8 +127,10 @@ VS code le propose d'office avec la touche `Alt`.
 Pour np++, il faut l'activer sur Paramètres -> Préférences -> Zones d'édition 
 
 ### 4. Utiliser son éditeur de code
-- Ouvrir le fichier XML. La coloration est elle bien activée ? Remplacer toutes les balises `<Utilisateur>` par des balises `<User>`
-- Dans ce même fichier XML, un `s` s'est glissé à la fin des prénoms aux lignes 11, 20 et 24. Supprimez ces trois `s` *en une seule édition*
+- Ouvrir le fichier XML([windows/files/Users.xml](./files/Users.xml)).  
+  - La coloration est elle bien activée ?  
+  - Remplacer toutes les balises `<Utilisateur>` par des balises `<User>`
+  - Dans ce même fichier XML, un `s` s'est glissé à la fin des prénoms aux lignes 11, 20 et 24. Supprimez ces trois `s` *en une seule édition*
 - Ouvrir le fichier CSV. Aux lignes 5 à 24, pour la colonne `CDBIKESTATIONID` remplacer la valeur par `ECO035`.
 - Ouvrir le fichier python (`.py`). Le bloc de la fonction `blablah` ne marche pas, il n'est pas indenté comme il faut. Corriger cela.
 - Commenter des blocs de code : 
@@ -149,7 +155,7 @@ Vous avez l'embarras du choix :
 
 et sans doute d'autres encore.
 
-On évitera Edge. S'il marque un net progrès par rapport aux précédents navigateurs Microsoft, il pose encore des problèmes en termes de support des standards.
+**On évitera Edge**. S'il marque un net progrès par rapport aux précédents navigateurs Microsoft, il pose encore des problèmes en termes de support des standards.
 
 De manière générale, je dirais que vous pouvez bien choisir celui qui vous plait. Mais apprenez à l'utiliser correctement. Et ne subissez pas le navigateur par défaut de votre ordi, choisissez le vôtre, que vous connaissez.
 
@@ -167,9 +173,9 @@ Personnellement, j'aime garder la séparation. Mais ça devient de plus en plus 
 **Sous firefox** :
 - dans la barre d'url, taper `about:config`
 - chercher le mot clef `handoff` et passez `browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar` à false. Ca évitera que le navigateur tape votre recherche dans la barre d'url.
-- de la même manireè, passer à `false` les params suivants : 
+- de la même manière, passer à `false` les params suivants : 
     - `browser.urlbar.suggest.searches`
-    - `keyword.enabled`
+    - `keyword.enabled` (`true` = traite les termes de recherche saisis dans la barre d'adresse comme des recherches Web par défaut)
     - `browser.fixup.alternate.enabled`
 - dans les paramètres de configuration ([about:preferences](about:preferences)), on pourra agir sur 
     - Recherche -> ajouter la barre de recherche
@@ -207,7 +213,7 @@ Il offre divers outils, globalement les mêmes qu'on soit sous Firefox ou Chrome
 
 On déroule https://github.com/pi-geosolutions/enigmes_html
 
-Eventuellement, on enchaine sur les premières de http://ouverture.pas.facile.free.fr/
+Eventuellement, on enchaine sur les premières de https://ouverture-pas-facile.fr/
 
 ## Scripting avec Windows -- notes
 
@@ -219,13 +225,13 @@ Malgré tout, parce que nous sommes braves, téméraires et qu'il le faut bien, 
 
 ### DOS ou powershell ?
 
-**DOS :** Le DOS existe depuis "toujours". Et ça se voit : peu ergonomique, très limité, il ne fait pas envie. Malgré tout, il existe encore, et même, vous allez sans doute le voir passer de temps en temps cette année, c'est par exemple parfois lui qui est fourni préconfiguré avec QGIS. 
+**DOS :** Le DOS existe "depuis toujours". Et ça se voit : peu ergonomique, très limité, il ne fait pas envie. Malgré tout, il existe encore, et même, vous allez sans doute le voir passer de temps en temps cette année, c'est par exemple parfois lui qui est fourni préconfiguré avec QGIS. 
 
 De base, il s'ouvre en tapant `cmd` dans l'invite Windows. A l'occasion, on ira y faire un tour. 
 
-**Powershell :** c'est son remplaçant, afin d'offrir à Windows un shell digne de ce nom. Notamment pour les usages sur serveur informatique, où l'interface graphique n'est souvent même pas une option... et où Linux se taille la part du lion. 
+**Powershell :** c'est son remplaçant, afin d'offrir à Windows un shell digne de ce nom. Un shell, ça sert notamment pour les usages sur serveur informatique, où l'interface graphique n'est souvent même pas une option... et où Linux se taille la part du lion. 
 
-Bien plus puissant que son ancêtre, il permet de réaliser des boucles, de chaîner des commandes, il offre aussi la complétion automatique (finit la commande lorsqu'on appuie sur la touche `Tab`), bref, c'est mieux. Et il reconnait un certain nombre des commandes de bases des shells courants de linux.
+Bien plus puissant que son ancêtre, powershell permet de réaliser des boucles, de chaîner des commandes, il offre aussi la complétion automatique (finit la commande lorsqu'on appuie sur la touche `Tab`), bref, c'est mieux. Et il reconnait un certain nombre des commandes de bases des shells courants de linux.
 
 **Shell :** c'est comme ça qu'on appelle l'interface utilisateur en ligne de commande. Powershell sous Windows, bash, sh, zsh sous Linux sont des shells. Bon, pour DOS, je ne me prononcerai pas.
 
@@ -237,9 +243,9 @@ Par défaut, il démarre à l'emplacement de notre compte utilisateur. Le chemin
 
 Le système de fichiers n'est pas vraiment vu de la même façon que via la GUI (interface graphique utilisateur). La GUI applique des modifs cosmétiques. Mais qui compliquent vite les choses. Avec le shell, vous êtes de l'autre côté du miroir.
 
-Un bon nombre des commandes listées ici sont reprises du shelle bash (linux), on les retrouvera donc sans surprise, mais plus puissantes, quand on verra linux.
+Un bon nombre des commandes listées ici sont reprises du shell bash (linux), on les retrouvera donc sans surprise, mais plus puissantes, quand on verra linux.
 
-qq commandes : 
+Quelques commandes : 
 
 - `pwd` : savoir où on est (chemin absolu)
 - `cd` : se déplacer (`cd` = *change directory*). 
@@ -305,17 +311,17 @@ foreach($file in Get-ChildItem midi-pyrenees-osm/*.shp) {
 ```
 
 ### Terminal Windows
-Dans le MS Store, vous trouverez une application appelée Windows Terminal. Elle est plutôt sympa, elle vous permet de lancer plusieurs terminaux de ligne de commande dans des onglets, comme le navigateur. Et pour chacun, de choisir entre les shells installés : powershell, DOS, linux (voir plus loin) etc
+Dans le MS Store, vous trouverez une application appelée Windows Terminal. Elle est plutôt sympa, elle vous permet de lancer plusieurs terminaux de ligne de commande dans des onglets, comme le navigateur. Et pour chacun, de choisir entre les shells installés : powershell, DOS, linux (voir plus loin) etc.
 
 
 ## Scripting avec Windows -- exercices
 
 - créer un dossier `tmp` à la racine du disque D
 - dans ce dossier `tmp`, créer un dossier `shell/data`
-- copier le fichier csv du dossier partagé dans ce dossier
+- copier le fichier csv de ce repo, dossier `windows/files`, dans ce dossier
 - en fait, on va copier plusieurs fichiers d'un coup
     - supprimer le fichier csv qu'on vient de copier
-    - copier le dossier sample-data dans le dossier tmp/shell/data
+    - copier le dossier files dans le dossier tmp/shell/data
 - lister le contenu du dossier
 - afficher à l'écran les 10 premières lignes du fichier CSV
 - maintenant, imaginons que nous voulons préparer un espace de travail pour plusieurs stagiaires, un dossier par stagiaire. Les stagiaires s'appellent Arthur, Marwanne, Lucie, Jérôme et Bjorn.

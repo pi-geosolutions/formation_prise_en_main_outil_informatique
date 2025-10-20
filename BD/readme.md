@@ -59,19 +59,22 @@ Alors ça vaut le coup d'en parler
 - données dans les lignes suivantes
 - attention au *type* (ou *format*) des données
 
-![](imgs/tableur_comme_BD.png "Utiliser le tableur comme un base de données")
+![](./imgs/tableur_comme_BD.png "Utiliser le tableur comme un base de données")
 
 
 #### Exemples
-- https://opendata.lillemetropole.fr/explore/dataset/wwwroubaixshopping/table/
+- https://www.data.gouv.fr/datasets/effectifs-deleves-par-niveau-et-nombre-de-classes-par-ecole-date-dobservation-au-debut-du-mois-doctobre-chaque-annee/
 - 
 
 ### Si on veut faire une synthèse des données
-- tableau croisé dynamique
+- tableau croisé dynamique (*"pivot table"* en anglais)
 - graphique
 - à la main avec des fonctions comme `NB.SI.ENV`, `SOMME.SI.ENV` etc
 
-https://documentation.libreoffice.org/assets/Uploads/Documentation/en/CG7.1/CG71-CalcGuide.pdf
+- https://documentation.libreoffice.org/assets/Uploads/Documentation/en/CG7.1/CG71-CalcGuide.pdf
+- https://wiki.documentfoundation.org/images/7/72/GS6405FR-D%C3%A9buterCalc.pdf
+- https://wiki.documentfoundation.org/images/e/ec/CG6408FR-Tabledynamique.pdf
+- https://wiki.documentfoundation.org/images/9/9a/CG6409FR-AnalyseDonn%C3%A9es.pdf
 
 
 ## CSV, un format d'échange
@@ -157,9 +160,9 @@ Combinés ensemble, VRT et ogr2ogr constituent en fait quasiment un [ETL](https:
 ### Le tableau comme outil de saisie de base de données
 Quel rapport avec notre sujet ?
 
-Hé bien VRT est capable de lire et transformer des données CSV. Et même du XLSX ou ODS. ogr2ogr sait publier en base de données. On a donc tout le nécessaire ou presque pour alimenter une base de données solide (type PostgreSQL, MySQL ou Oracle) en ligne, à partir de fichiers tableur gérés par des personnes non-techniques, non formées aux bases de données.
+Hé bien VRT est capable de lire et transformer des données CSV. Et même du XLSX ou ODS. `ogr2ogr` sait publier en base de données. On a donc tout le nécessaire ou presque pour alimenter une base de données solide (type PostgreSQL, MySQL ou Oracle) en ligne, à partir de fichiers tableur gérés par des personnes non-techniques, non formées aux bases de données.
 
-En d'autres termes : on peut 
+En d'autres termes, on peut :
 
 - laisser les collègues travailler sur leurs outils habituels, 
   - sans leur demander d'apprendre les bases de données, la ligne de commande, les SIG etc. 
@@ -182,7 +185,7 @@ On va regarder la base de données dans la continuité de ce cours : un système
 
 Pour cette initiation, on va regarder du côté de PostgreSQL/PostGIS. PostGIS est l'extension spatiale qui permet à PostgreSQL de gérer efficacement les données à caractère géospatial. 
 
-Il existe des outils graphiques pour exploiter une base PostgreSQL. Mais pour cette mise en jambes, on est déjà sur la console alors restons-y. Il est également important de savoir se passer de l'interface graphique : vous n'y aurez pas toujours accès !
+Il existe des outils graphiques pour exploiter une base PostgreSQL. Mais pour cette mise en jambes, on est déjà sur la console linux alors restons-y. Il est également important de savoir se passer de l'interface graphique : vous n'y aurez pas toujours accès !
 
 ### Se connecter à une base de données
 1. installons le client ligne de commande pour postgresql : `sudo apt install postgresql-client`
@@ -192,7 +195,7 @@ Il existe des outils graphiques pour exploiter une base PostgreSQL. Mais pour ce
   - nom de la base
   - nom d'utilisateur
   - mot de passe
-<br />En principe, idgeo nous fournit une base, sinon j'en mettrai une en place pour la durée de ce cours
+<br />J'ai mis une base en place pour la durée de ce cours
 ```bash
 # note pour moi-même : si pas de base, en lancer une via la compo docker
 docker compose -p idgeo-db -f resources/docker-compose.yml up -d
@@ -244,15 +247,23 @@ Ca devrait nous lister les tables publiées dans le schema public, qui est le sc
 
 Si c'est bon, on peut ouvrir une console psql pour faire nos manips, ça sera plus pratique : 
 ```bash
-psql # normalement pas besoin de plus car on a défini les variables d'environnement PGTRUC préalablement dans cette console.
+psql -h localhost -U cpgeom -d cpgeom
 ```
 
 **_A partir de maintenant, on est dans la ligne de commande interactive de psql_**
 ```sql
+# Exemples de requêtes: 
+# Entrées différentes par année
+SELECT date_part('year', date) AS anneee, COUNT(distinct plat) AS entrees_differentes FROM jpommier.menus_cantine WHERE categorie = 'entrée' GROUP BY date_part('year', date);
+
+# Nb de livres / prêts par bibli et type de livre
+SELECT "bibliothèque", "type de document", COUNT(*) AS nb_livres, SUM(nb_prets) AS total_prets
+FROM jpommier.ouvrages_acquis_par_les_mediatheques
+GROUP BY "bibliothèque", "type de document"
+ORDER BY "bibliothèque", "type de document" ;
 
 ```
-TODO: Exemples de requêtes
 
 ### Insertion de données
 
-TODO:
+cf script "smoothies"
