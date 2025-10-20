@@ -219,18 +219,18 @@ export PGDATABASE=cpgeom
 export PGUSER=cpgeom
 export PGHOST=localhost
 
-prefix=jpommier
-schema=jpommier
+prefix=jpommier_
+schema=cpgeom
 psql -c "CREATE SCHEMA $schema"
 source=ouvrages-acquis-par-les-mediatheques
 # On remplace le préfixe par défaut dans les VRT. Il permet qu'on ait chacun nos tables 
 # dans la base sanss'écraser les uns les autres
-sed -i "s/jpommier_//g" ${source}.vrt
+sed -i "s/jpommier_/${prefix}/g" ${source}.vrt
 ogr2ogr -progress -f PostgreSQL PG:"host='$PGHOST' user='$PGUSER' dbname='$PGDATABASE'" ${source}.vrt -lco SCHEMA=$schema -lco OVERWRITE=YES
 # Et si ça s'est bien passé, on envoie le reste avec une boucle, c'est plus efficace : 
 for source in 2012-2022-balances-des-comptes-de-letat donnees-essentielles-mel-marches-publics logements-vacants-du-parc-prive-par-commune-au-01012021-lovac admin_express_communes_31  menu-cantine
 do
-  sed -i "s/jpommier_//g" ${source}.vrt
+  sed -i "s/jpommier_/${prefix}/g" ${source}.vrt
   ogr2ogr -progress -f PostgreSQL PG:"host='$PGHOST' user='$PGUSER' dbname='$PGDATABASE'" ${source}.vrt -lco SCHEMA=$schema -lco OVERWRITE=YES 
 done
 ```
@@ -241,9 +241,9 @@ On aurait aussi pu écrire un fichier .pgpass comme documenté dans https://docs
 ### Requêtes SQL (ou comment faire du tableau croisé dynamique sans souris -- et sans soucis)
 Commençons par vérifier que les données sont bien présentes dans la base : on va utiliser psql pour exécuter une seule commande : 
 ```bash
-psql -c "\dt public.*;"
+psql -c "\dt cpgeom.*;"
 ```
-Ca devrait nous lister les tables publiées dans le schema public, qui est le schema par défaut.
+Ca devrait nous lister les tables publiées dans le schema `cpgeom` où l'on vient de pousser nos données.
 
 Si c'est bon, on peut ouvrir une console psql pour faire nos manips, ça sera plus pratique : 
 ```bash
@@ -254,11 +254,11 @@ psql -h localhost -U cpgeom -d cpgeom
 ```sql
 # Exemples de requêtes: 
 # Entrées différentes par année
-SELECT date_part('year', date) AS anneee, COUNT(distinct plat) AS entrees_differentes FROM jpommier.menus_cantine WHERE categorie = 'entrée' GROUP BY date_part('year', date);
+SELECT date_part('year', date) AS anneee, COUNT(distinct plat) AS entrees_differentes FROM cpgeom.menus_cantine WHERE categorie = 'entrée' GROUP BY date_part('year', date);
 
 # Nb de livres / prêts par bibli et type de livre
 SELECT "bibliothèque", "type de document", COUNT(*) AS nb_livres, SUM(nb_prets) AS total_prets
-FROM jpommier.ouvrages_acquis_par_les_mediatheques
+FROM cpgeom.ouvrages_acquis_par_les_mediatheques
 GROUP BY "bibliothèque", "type de document"
 ORDER BY "bibliothèque", "type de document" ;
 
