@@ -321,7 +321,7 @@ Dans le MS Store, vous trouverez une application appelée Windows Terminal. Elle
 - copier le fichier csv de ce repo, dossier `data/code_files`, dans ce dossier
 - en fait, on va copier plusieurs fichiers d'un coup
     - supprimer le fichier csv qu'on vient de copier
-    - copier le dossier files dans le dossier tmp/shell/data
+    - copier le dossier code_files dans le dossier tmp/shell/data
 - lister le contenu du dossier
 - afficher à l'écran les 10 premières lignes du fichier CSV
 - maintenant, imaginons que nous voulons préparer un espace de travail pour plusieurs stagiaires, un dossier par stagiaire. Les stagiaires s'appellent Arthur, Marwanne, Lucie, Jérôme et Bjorn.
