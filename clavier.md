@@ -30,37 +30,43 @@ Ca donne de bonnes bases. Si vous avez un temps mort durant les cours, vous pour
 Quels sont les raccourcis pour ?
 
 - Edition
-    - Copier
-    - Coller
-    - Couper
-    - Tout sélectionner
-    - Annuler la dernière action
-    - Restaurer la dernière action
-    - Enregistrer un fichier
-    - Enregistrer un fichier et définir le nom
-    - Texte en gras
-    - Texte en italique 
-    - Chercher dans le texte 
-    - Remplacer dans le texte 
+    - Copier Ctrl+C
+    - Coller Ctrl+V
+    - Couper Ctrl+X
+    - Tout sélectionner Ctrl+A
+    - Annuler la dernière action Ctrl+Z
+    - Restaurer la dernière action Ctrl+Y ou Ctrl+Shift+Z
+    - Enregistrer un fichier Ctrl+S
+    - Enregistrer un fichier et définir le nom Ctrl+Shift+S
+    - Texte en gras Ctrl+B ou G
+    - Texte en italique Ctrl+I
+    - Chercher dans le texte Ctrl+F
+    - Accéder à la fonction Chercher-Remplacer Ctrl+H ou Ctrl+R
 - Actions sur les fichiers / fenêtres
-    - Ouvrir un fichier 
-    - Créer un nouveau dossier 
-    - Afficher les propriétés d'un fichier 
-    - Quitter l'application 
-    - Ouvrir le menu Windows 
-    - Passer à l'élément suivant 
-    - Afficher/masquer le bureau Windows 
+    - Ouvrir un fichier Entrée
+    - Créer un nouveau dossier Ctrl+Shift+N 
+    - Afficher les propriétés d'un fichier Alt + Entrée
+    - Quitter l'application Alt+F4 Alt+Q Ctrl+W
+    - Ouvrir le menu Windows Touche Windows
+    - Passer à l'élément suivant Alt+Tab Alt+Shift+Tab
+    - Afficher/masquer le bureau Windows Windows+D
+    - Renommer un fichier : F2
+    - Copier le chemin d'un fichier/dossier: Ctrl+Shift+C
 - Dans le navigateur
-    - Ouvrir dans un nouvel onglet 
-    - Fermer un onglet 
-    - Restaurer un onglet fermé 
-    - Restaurer une fenêtre fermée 
-    - Recharger la page 
-    - Revenir à la page précédente (historique-arrière) 
-    - Passer d'un onglet à l'autre 
+    - Ouvrir un lien dans un nouvel onglet Ctrl+clic
+    - Fermer un onglet Ctrl+W
+    - Restaurer un onglet fermé Ctrl+Shift+T 
+    - Restaurer une fenêtre fermée Ctrl+Shift+N
+    - Recharger la page Ctrl+R
+    - Revenir à la page précédente (historique-arrière) Alt+<-
+    - Passer d'un onglet à l'autre Ctrl+Tab Ctrl+Shift+Tab
 - Divers : 
-    - Ouvrir l'outil de recherche 
-    - Verrouiller la session 
+    - Ouvrir l'outil de recherche dans Windows Windows+R ou Windows tout seul
+    - Verrouiller la session Windows+L
+    - Capture d'écran : Windows+Shift+S
+    - Fermer fenêtre en cours ou Windows si pas de fenêtre en cours : Alt+F4
+    - Gestionnaire de processus : Ctrl+Alt+Suppr
+    - Capture écran fenêtre active : Alt+Impr Ecran
     
 
 
