@@ -118,7 +118,7 @@ Et enfin, pour reprendre l'exemple précédemment donné :
 ```bash
 for f in $(ls -Sr midi-pyrenees-osm/*.shp)
 do
-    ogr2ogr ${s%.*}_09.shp -clipsrc ../departement-ariege.shp -lco ENCODING=UTF-8 $f ;     
+    ogr2ogr ${f%.*}_09.shp -clipsrc ../departement-ariege.shp -lco ENCODING=UTF-8 $f ;     
 done
 ```
 
