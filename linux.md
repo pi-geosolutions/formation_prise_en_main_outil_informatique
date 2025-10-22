@@ -160,6 +160,12 @@ Vous allez créer un script qui
 - télécharge les fichiers pour chaque commune, les stocke dans le sous-dossier correspondant et le décompresse
 - Utilise ogr2ogr pour transformer le fichier CSV en fichier geopackage
 
+_Si on a préalablement installé gdal/ogr, on pourra utiliser la commande ogr2ogr pour transformer les données vectorielles, par exemple ici :_
+```
+ogr2ogr -f GPKG 31032.gpkg -oo X_POSSIBLE_NAMES=longitude -oo Y_POSSIBLE_NAME
+S=latitude -a_srs 'EPSG:4326' 31032.csv
+```
+
 #### Deuxième approche
 Supposons que le service ne fournisse pas des extractions par commune et qu'on doive faire avec un plus gros fichier.
 
