@@ -162,8 +162,7 @@ Vous allez créer un script qui
 
 _Si on a préalablement installé gdal/ogr, on pourra utiliser la commande ogr2ogr pour transformer les données vectorielles, par exemple ici :_
 ```
-ogr2ogr -f GPKG 31032.gpkg -oo X_POSSIBLE_NAMES=longitude -oo Y_POSSIBLE_NAME
-S=latitude -a_srs 'EPSG:4326' 31032.csv
+ogr2ogr -f GPKG 31032.gpkg -oo X_POSSIBLE_NAMES=longitude -oo Y_POSSIBLE_NAMES=latitude -a_srs 'EPSG:4326' 31032.csv
 ```
 
 #### Deuxième approche
