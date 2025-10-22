@@ -266,8 +266,13 @@ Quelques commandes :
 - `mkdir` : créer un dossier.
     - `mkdir dossier1`
     - `mkdir -p dossier1/sous-dossier` 
-- `cp` : copier un fichier. `cp source.csv destination/csv`
-- `rm` : supprimer un fichier/dossier.
+- `cp` : 
+  - copier un fichier. `cp source.csv destination/csv`
+  - copier un dossier et son contenu : `cp -r dossier_source destination/`  
+    (`-r` pour "récursif", en profondeur).
+- `rm` : 
+  - supprimer un fichier/dossier : `rm fichier.csv`
+  - supprimer un dossier non-vide, en mode récursif, sans prompt de confirmation : ` rm -r dossier_a_supprimer`
 
 Il est parfois pratique de n'afficher que le début (ou la fin) d'un énorme fichier. Là ou le charger dans un editeur de code sera long et gourmand, en ligne de commande ça devrait être quasi instantané
 
@@ -275,6 +280,8 @@ Il est parfois pratique de n'afficher que le début (ou la fin) d'un énorme fic
 - `gc -Tail 10 log.txt` affiche les 10 dernières lignes
 - `gc log.txt | more`             # or less if you have it installed
 - `gc log.txt | %{ $_ -replace '\d+', '($0)' }` chercher-remplacer
+
+Obtenir de l'aide sur l'utilisation d'une commande : `Get-Help`. Ex. `Get-Help cp`.
 
 #### Boucles
 
