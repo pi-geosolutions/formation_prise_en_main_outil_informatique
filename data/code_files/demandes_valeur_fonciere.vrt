@@ -3,7 +3,9 @@
   <OGRVRTLayer name="demande_de_valeur_fonciere">
     <SrcDataSource relativeToVRT="1">31.csv</SrcDataSource>
     <SrcSql dialect="sqlite">SELECT * FROM '31' WHERE code_commune='REMPLACER_PAR_CODE_INSEE_COMMUNE'</SrcSql>
-    
     <!-- <SrcLayer>31</SrcLayer> -->
+    <GeometryType>wkbPoint</GeometryType>
+    <LayerSRS>EPSG:4326</LayerSRS>
+    <GeometryField encoding="PointFromColumns" x="longitude" y="latitude"/>
   </OGRVRTLayer>
 </OGRVRTDataSource>

@@ -178,7 +178,7 @@ Vous allez créer un script qui
 - remplace la chaine de caractère REMPLACER_PAR_CODE_INSEE_COMMUNE dans chacune des copies du VRT, afin de l'adapter à chaque commune
 - Utilise ogr2ogr pour transformer la source VRT en fichier geopackage
 
-*Note 1* : VRT est un format inveté par GDAL/OGR, qui permet de définir une donnée virtuelle à partir d'une donnée source et d'un fichier .vrt qui définit une transformation à appliquer à cette donnée source. Vous aurez un cours dédié à ça durant votre cursus. On ne va donc pas rentrer trop dans les détails. Mais pour les impatients : https://gdal.org/drivers/vector/vrt.html.
+*Note 1* : VRT est un format inventé par GDAL/OGR, qui permet de définir une donnée virtuelle à partir d'une donnée source et d'un fichier .vrt qui définit une transformation à appliquer à cette donnée source. Vous aurez un cours dédié à ça durant votre cursus. On ne va donc pas rentrer trop dans les détails. Mais pour les impatients : https://gdal.org/drivers/vector/vrt.html.
 
 *Note 2* : bien sûr, on pourrait faire plus simple. Mais on essaie d'appliquer ce qu'on a vu en cours.
 
