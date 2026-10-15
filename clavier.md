@@ -9,7 +9,7 @@
 - [ ] Notions de dactylo
     - on est supposés ne pas avoir besoin de regarder le clavier quand on tape
     - positionner ses dix doigts sur le clavier
-    - application d'apprentissage dactylo (https://www.typingclub.com/)
+    - application d'apprentissage dactylo (https://www.edclub.com/fr/library/expedition-dactylo)
     - utiliser au moins 4 doigts pour frapper au clavier
 - [ ] Raccourcis clavier
     - [ ] connaitre les raccourcis claviers courants
@@ -21,7 +21,7 @@
 ## Exercices
 ### 1. Initiation dactylo
 
-Aller sur https://www.typingclub.com/ et suivre les premières leçons
+Aller sur https://www.edclub.com/fr/library/expedition-dactylo, *Expédition dactylo* et suivre les premières leçons
 
 Ca donne de bonnes bases. Si vous avez un temps mort durant les cours, vous pourrez toujours y revenir pour améliorer votre maitrise.
 
