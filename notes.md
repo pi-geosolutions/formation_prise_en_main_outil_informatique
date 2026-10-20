@@ -1,3 +1,11 @@
+
+# Clavier.md
+
+Effacer tous les raccourcis avec la commande
+```bash
+sed -i -E '/^\| Action |^\|-/!s/^(\|[^|]*\|)[^|]*\|$/\1 |/' clavier.md
+```
+
 Pour les exercices de BD : 
 
 On utilise : 
