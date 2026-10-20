@@ -120,7 +120,7 @@ Nous allons donc plutôt ici regarder du côté d'OGR
 ### VRT
 *https://gdal.org/drivers/vector/vrt.html#vector-vrt* 
 
-J'ai découvert le format VRT récemment, lors du Geocom 2021 (conférence de la communauté geOrchestra). Le seul à s'être tenu en ligne et donc... à être enregistré ([vidéo sur youtube](https://www.youtube.com/watch?v=EIYF6JhlmAY)).
+J'ai découvert le format VRT récemment, lors du Geocom 2021 (conférence de la communauté geOrchestra). Le seul à s'être tenu en ligne et donc... le premier à être enregistré ([vidéo sur youtube](https://www.youtube.com/watch?v=EIYF6JhlmAY)).
 
 VRT est un format supporté (et inventé et maintenu) par la librairie OGR. Son rôle est de définir une donnée virtuelle, grâce à un fichier XML définissant des correspondances et traitements, et bien sûr une donnée source. On parlera de donnée VRT en parlant du fichier `.vrt`.
 

@@ -127,7 +127,7 @@ VS code le propose d'office avec la touche `Alt`.
 Pour np++, il faut l'activer sur Paramètres -> Préférences -> Zones d'édition 
 
 ### 4. Utiliser son éditeur de code
-- Ouvrir le fichier XML([data/code_files/Users.xml](./files/Users.xml)).  
+- Ouvrir le fichier XML ([data/code_files/Users.xml](./files/Users.xml)).  
   - La coloration est elle bien activée ?  
   - Remplacer toutes les balises `<Utilisateur>` par des balises `<User>`
   - Dans ce même fichier XML, un `s` s'est glissé à la fin des prénoms aux lignes 11, 20 et 24. Supprimez ces trois `s` *en une seule édition*
@@ -323,6 +323,8 @@ Dans le MS Store, vous trouverez une application appelée Windows Terminal. Elle
 
 ## Scripting avec Windows -- exercices
 
+En ligne de commande : 
+
 - créer un dossier `tmp` à la racine du disque D
 - dans ce dossier `tmp`, créer un dossier `shell/data`
 - copier le fichier csv de ce repo, dossier `data/code_files`, dans ce dossier
@@ -330,7 +332,7 @@ Dans le MS Store, vous trouverez une application appelée Windows Terminal. Elle
     - supprimer le fichier csv qu'on vient de copier
     - copier le dossier code_files dans le dossier tmp/shell/data
 - lister le contenu du dossier
-- afficher à l'écran les 10 premières lignes du fichier CSV
+- afficher à l'écran les 5 premières lignes du fichier CSV
 - maintenant, imaginons que nous voulons préparer un espace de travail pour plusieurs stagiaires, un dossier par stagiaire. Les stagiaires s'appellent Arthur, Marwanne, Lucie, Jérôme et Bjorn.
     - créer un dossier destination tmp/shell/stagiaires
     - dans ce dossier, créer un dossier pour chacun des stagiaires, lui-même contenant les sous-dossiers `cours`, `exercices`, `scripts`, `tmp`
