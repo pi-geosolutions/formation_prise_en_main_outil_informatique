@@ -306,7 +306,7 @@ Ou pour une boucle sur une liste de chaines de caractères :
 ```powershell
 $employees = @("Bijay","Bhawana","Padmini","Lakshmi")
 foreach ($emp in $employees) {
-  $emp;
+  mkdir workshop/$emp
  }
  ```
 
