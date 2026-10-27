@@ -10,7 +10,7 @@
               , ',') AS marqueurs
       FROM 'Feuil1' WHERE trim("Entrée 1") != '' AND trim("Entrée 1") != '0'</SrcSql>
     <!-- <SrcLayer>Feuil1</SrcLayer> -->
-    <Field name="date" src="date" type="String" />
+    <Field name="date" src="date" type="Date" />
     <Field name="periode" src="période" type="String" />
     <Field name="ouverture" src="Ouverture" type="String" />
     <Field name="theme" src="Thème" type="String" />
@@ -27,7 +27,7 @@
               , ',') AS marqueurs
       FROM 'Feuil1' WHERE trim("Entrée 2") != '' AND trim("Entrée 2") != '0'</SrcSql>
     <!-- <SrcLayer>Feuil1</SrcLayer> -->
-    <Field name="date" src="date" type="String" />
+    <Field name="date" src="date" type="Date" />
     <Field name="periode" src="période" type="String" />
     <Field name="ouverture" src="Ouverture" type="String" />
     <Field name="theme" src="Thème" type="String" />
@@ -44,7 +44,7 @@
               , ',') AS marqueurs
       FROM 'Feuil1' WHERE trim("Plat 1") != '' AND trim("Plat 1") != '0'</SrcSql>
     <!-- <SrcLayer>Feuil1</SrcLayer> -->
-    <Field name="date" src="date" type="String" />
+    <Field name="date" src="date" type="Date" />
     <Field name="periode" src="période" type="String" />
     <Field name="ouverture" src="Ouverture" type="String" />
     <Field name="theme" src="Thème" type="String" />
@@ -61,7 +61,7 @@
               , ',') AS marqueurs
       FROM 'Feuil1' WHERE trim("Plat 2") != '' AND trim("Plat 2") != '0'</SrcSql>
     <!-- <SrcLayer>Feuil1</SrcLayer> -->
-    <Field name="date" src="date" type="String" />
+    <Field name="date" src="date" type="Date" />
     <Field name="periode" src="période" type="String" />
     <Field name="ouverture" src="Ouverture" type="String" />
     <Field name="theme" src="Thème" type="String" />
@@ -78,7 +78,7 @@
               , ',') AS marqueurs
       FROM 'Feuil1' WHERE trim("Accompagnement") != '' AND trim("Accompagnement") != '0'</SrcSql>
     <!-- <SrcLayer>Feuil1</SrcLayer> -->
-    <Field name="date" src="date" type="String" />
+    <Field name="date" src="date" type="Date" />
     <Field name="periode" src="période" type="String" />
     <Field name="ouverture" src="Ouverture" type="String" />
     <Field name="theme" src="Thème" type="String" />
@@ -95,7 +95,7 @@
               , ',') AS marqueurs
       FROM 'Feuil1' WHERE trim("Fromages / Laitages 1") != '' AND trim("Fromages / Laitages 1") != '0'</SrcSql>
     <!-- <SrcLayer>Feuil1</SrcLayer> -->
-    <Field name="date" src="date" type="String" />
+    <Field name="date" src="date" type="Date" />
     <Field name="periode" src="période" type="String" />
     <Field name="ouverture" src="Ouverture" type="String" />
     <Field name="theme" src="Thème" type="String" />
@@ -112,7 +112,7 @@
               , ',') AS marqueurs
       FROM 'Feuil1' WHERE trim("Fromages / Laitages 2") != '' AND trim("Fromages / Laitages 2") != '0'</SrcSql>
     <!-- <SrcLayer>Feuil1</SrcLayer> -->
-    <Field name="date" src="date" type="String" />
+    <Field name="date" src="date" type="Date" />
     <Field name="periode" src="période" type="String" />
     <Field name="ouverture" src="Ouverture" type="String" />
     <Field name="theme" src="Thème" type="String" />
@@ -129,7 +129,7 @@
               , ',') AS marqueurs
       FROM 'Feuil1' WHERE trim("Desserts 1") != '' AND trim("Desserts 1") != '0'</SrcSql>
     <!-- <SrcLayer>Feuil1</SrcLayer> -->
-    <Field name="date" src="date" type="String" />
+    <Field name="date" src="date" type="Date" />
     <Field name="periode" src="période" type="String" />
     <Field name="ouverture" src="Ouverture" type="String" />
     <Field name="theme" src="Thème" type="String" />
@@ -146,7 +146,7 @@
               , ',') AS marqueurs
       FROM 'Feuil1' WHERE trim("Desserts 2") != '' AND trim("Desserts 2") != '0'</SrcSql>
     <!-- <SrcLayer>Feuil1</SrcLayer> -->
-    <Field name="date" src="date" type="String" />
+    <Field name="date" src="date" type="Date" />
     <Field name="periode" src="période" type="String" />
     <Field name="ouverture" src="Ouverture" type="String" />
     <Field name="theme" src="Thème" type="String" />
@@ -162,7 +162,7 @@
         '' AS marqueurs
       FROM 'Feuil1' WHERE trim("plat_2_bis") != '' AND trim("plat_2_bis") != '0'</SrcSql>
     <!-- <SrcLayer>Feuil1</SrcLayer> -->
-    <Field name="date" src="date" type="String" />
+    <Field name="date" src="date" type="Date" />
     <Field name="periode" src="période" type="String" />
     <Field name="ouverture" src="Ouverture" type="String" />
     <Field name="theme" src="Thème" type="String" />

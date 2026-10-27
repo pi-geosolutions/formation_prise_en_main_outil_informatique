@@ -210,7 +210,6 @@ Si la connexion se passe bien, on aura une invite de commande. On peut demander 
 ### Pousser de la donnée en base
 A priori, notre base est vide pour l'instant. On ne va pas rentrer trop dans le détail de l'ingestion de données. Mais puisqu'on a parlé d'un flux de publication, on va voir le cas simple où l'on publie des données CSV ou xlsx en base. On va utiliser ogr2ogr : 
 
-TODO: Collecter les jeux de données à utiliser et les préparer
 ```bash
 cd data/bd
 # Afin d'éviter devoir taper le mot de passe à chaque fois, on va le déclarer en variable d'environnement ici : 
@@ -253,11 +252,11 @@ psql -h localhost -U cpgeom -d cpgeom
 
 **_A partir de maintenant, on est dans la ligne de commande interactive de psql_**
 ```sql
-# Exemples de requêtes: 
-# Entrées différentes par année
+-- Exemples de requêtes: 
+-- Entrées différentes par année
 SELECT date_part('year', date) AS anneee, COUNT(distinct plat) AS entrees_differentes FROM cpgeom.menus_cantine WHERE categorie = 'entrée' GROUP BY date_part('year', date);
 
-# Nb de livres / prêts par bibli et type de livre
+-- Nb de livres / prêts par bibli et type de livre
 SELECT "bibliothèque", "type de document", COUNT(*) AS nb_livres, SUM(nb_prets) AS total_prets
 FROM cpgeom.ouvrages_acquis_par_les_mediatheques
 GROUP BY "bibliothèque", "type de document"
